@@ -22,8 +22,5 @@ public class QuesoChihuahua implements Queso {
         this.temperature = temp;
     }
 
-    public void melt(boolean melted) {
-        this.melted = melted;
-
-    }
+    public void melt(boolean melted) {this.melted = melted;}
 }

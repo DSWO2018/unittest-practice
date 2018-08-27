@@ -8,8 +8,7 @@ public class QuesoChihuahuaTest {
     QuesoChihuahua quesoChihuahua;
 
     @Before
-    public void setUp(){
-        quesoChihuahua = new QuesoChihuahua();
+    public void setUp(){ quesoChihuahua = new QuesoChihuahua();
     }
 
     @Test
