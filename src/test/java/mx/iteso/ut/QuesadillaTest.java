@@ -4,7 +4,6 @@ import org.junit.Test;
 import org.junit.Before;
 import static org.junit.Assert.*;
 import static org.mockito.Mockito.*;
-import org.mockito.Mockito.*;
 
 public class QuesadillaTest
 {
@@ -19,9 +18,8 @@ public class QuesadillaTest
       mockedTortilla = mock(Tortilla.class);
       quesadilla.setQueso(mockedQueso);
       quesadilla.setTortilla(mockedTortilla);
-
-
    }
+
    @Test
    public void quesadillaPerfecta(){
        when(mockedQueso.isMelted()).thenReturn(true);
@@ -48,10 +46,26 @@ public class QuesadillaTest
    }
    @Test
    public void quesadillaTerrible(){
-       fail("Please implement corresponding test");
+       when(mockedQueso.isMelted()).thenReturn(false);
+       when(mockedTortilla.isToasted()).thenReturn(true);
+       when(mockedTortilla.getCurrentTemperature()).thenReturn(2,8,8,8,14);
+       when(mockedTortilla.getToastTemperature()).thenReturn(10);
+       when(mockedQueso.getCurrentTemperature()).thenReturn(2,8,8,8,14);
+       when(mockedQueso.getMeltingTemperature()).thenReturn(20);
+       assertEquals("Terrible quesadilla",quesadilla.prepareSingle());
+       verify(mockedTortilla,times(1)).toast(true);
+       verify(mockedQueso,never()).melt(true);
    }
    @Test
    public void noHayGas(){
-      fail("Please implement corresponding test");
-   }
+        when(mockedQueso.isMelted()).thenReturn(false);
+        when(mockedTortilla.isToasted()).thenReturn(false);
+        when(mockedTortilla.getCurrentTemperature()).thenReturn(2,8,8,8,14);
+        when(mockedTortilla.getToastTemperature()).thenReturn(0);
+        when(mockedQueso.getCurrentTemperature()).thenReturn(2,8,8,8,14);
+        when(mockedQueso.getMeltingTemperature()).thenReturn(0); 
+        assertEquals("You ran out of gas",quesadilla.prepareSingle());
+        verify(mockedTortilla,never()).toast(true);
+        verify(mockedQueso,never()).melt(true); 
+    }
 }
