@@ -9,11 +9,13 @@ public class TortillaHarina implements Tortilla {
         return this.toasted;
     }
 
-    public int getCurrentTemperature () {
+    public int getCurrentTemperature() {
         return this.temperature;
     }
 
-    public int getToastTemperature () { return this.toasting; }
+    public int getToastTemperature() {
+        return this.toasting;
+    }
 
     public void setCurrentTemperature(int temp) {
         this.temperature = temp;
