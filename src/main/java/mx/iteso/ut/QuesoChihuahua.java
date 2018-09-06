@@ -21,7 +21,7 @@ public class QuesoChihuahua implements Queso {
     /**
      * Variable para nivel de cocinado.
      */
-    private int melting = 20;
+    private final int melting = 20;
     /**
      * Para saber si esta cocinado.
      *

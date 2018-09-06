@@ -1,8 +1,10 @@
+
 /**
  * Paquete de trabajo para clases de comida.
- * @since 1.0
+ *
  * @author Luis Fernando Palafox.
  * @version 1.1
+ * @since 1.0
  */
 package mx.iteso.ut;
 
@@ -10,6 +12,7 @@ package mx.iteso.ut;
  * Clase para preparar quesadillas.
  */
 public class Quesadilla {
+
     /**
      * Variable para queso.
      */

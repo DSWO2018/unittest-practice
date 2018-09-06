@@ -11,27 +11,54 @@ package mx.iteso.ut;
  * Clase para preparar TortillaMaiz.
  */
 public class TortillaMaiz implements Tortilla {
-    boolean toasted;
-    int temperature;
-    int toasting = 20;
-
+    /**
+     * Variable para tostado.
+     */
+    private boolean toasted;
+    /**
+     * Variable para temperatura.
+     */
+    private int temperature;
+    /**
+     * Variable para nivel de tostado.
+     */
+    private final int toasting = 20;
+    /**
+     * Se ve el tipo de tostado.
+     *
+     * @return se da el nivel de tostado.
+     */
     public final boolean isToasted() {
         return this.toasted;
     }
-
+    /**
+     * Se ve el tipo de tostado.
+     *
+     * @return se da el nivel de tostado.
+     */
     public final int getToastTemperature() {
         return this.toasting;
     }
-
+    /**
+     * Se ve el esdatdo.
+     *
+     * @return se regresa la temperatura en el momento.
+     */
     public final int getCurrentTemperature() {
         return this.temperature;
     }
-
+    /**
+     * Se regresa la temperatura.
+     * @param temp se da la temperatura.
+     */
     public final void setCurrentTemperature(final int temp) {
         this.temperature = temp;
     }
-
-    public final void toast(final boolean toasted) {
-        this.toasted = toasted;
+    /**
+     * Se ve si se quiere tostada.
+     * @param toastedv estado del tostado.
+     */
+    public final void toast(final boolean toastedv) {
+        this.toasted = toastedv;
     }
 }

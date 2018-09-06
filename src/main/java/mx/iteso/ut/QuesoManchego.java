@@ -21,7 +21,7 @@ public class QuesoManchego implements Queso {
     /**
      * Variable para nivel de cocinado.
      */
-    private int melting = 18;
+    private final int melting = 18;
     /**
      * Para saber si esta cocinado.
      *
