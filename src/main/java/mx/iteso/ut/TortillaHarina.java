@@ -1,30 +1,67 @@
 package mx.iteso.ut;
-
+/**
+ * Clase tortillaharina que implementa tortilla.
+ */
 public class TortillaHarina implements Tortilla {
-    boolean toasted;
-    int temp;
-    int toasting = 17;
 
+    /**
+     * Temperatura en la que se derrite.
+     */
+    private final int melttemp = 20;
+
+    /**
+     * Tostada.
+     */
+    private boolean toasted;
+
+    /**
+     * Temperatura.
+     */
+    private int temp;
+
+    /**
+     * Temperatura de tostamiento.
+     */
+    private int toasting = melttemp;
+
+    /**
+     * Esta tostada.
+     * @return regresa verdadero si es tostada
+     */
     public boolean isToasted()
     {
         return toasted;
     }
 
-    public int getToastTemperature()
-    {
+    /**
+     * Temperatura de la tostada.
+     * @return la temperatura
+     */
+    public int getToastTemperature()  {
         return toasting;
     }
 
-    public int getCurrentTemperature()
-    {
+    /**
+     * Temperatura actual.
+     * @return  la temperatura
+     */
+    public int getCurrentTemperature() {
         return temp;
     }
 
-    public void setCurrentTemperature(int temp) {
-        this.temp = temp;
+    /**
+     * Poner la temperatura indicada.
+     * @param tempera valor a modificar
+     */
+    public void setCurrentTemperature(final int tempera) {
+        this.temp = tempera;
     }
 
-    public void toast(boolean toasted) {
-        this.toasted = toasted;
+    /**
+     * Tostar.
+     * @param toasteded Valor a modificar
+     */
+    public void toast(final boolean toasteded) {
+        this.toasted = toasteded;
     }
 }
