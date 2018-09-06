@@ -4,36 +4,66 @@ package mx.iteso.ut;
  * Hello world!
  *
  */
-public class Quesadilla
-{
+public class Quesadilla {
+    /**
+     * Variable.
+     */
     private Queso queso;
+    /**
+     * Variable.
+     */
     private Tortilla tortilla;
+    /**
+     * Variable.
+     */
     private int heatLevel;
+    /**
+     * Metodo.
+     * @return el resultado de que tan rica esta la quesadilla.
+     */
+    public final String prepareSingle() {
 
-    public String prepareSingle(){
 
+     while (getQueso().getCurrentTemperature()
+             < getQueso().getMeltingTemperature()
+             && getTortilla().getCurrentTemperature()
+                     < getTortilla().getToastTemperature()) {
+         getTortilla().setCurrentTemperature(
+                 getTortilla()
+                         .getCurrentTemperature()
+                         + getHeatLevel());
 
-     while(getQueso().getCurrentTemperature()< getQueso().getMeltingTemperature() && getTortilla().getCurrentTemperature()< getTortilla().getToastTemperature()){
-         getTortilla().setCurrentTemperature(getTortilla().getCurrentTemperature() + getHeatLevel());
-         getQueso().setCurrentTemperature(getQueso().getCurrentTemperature() + getHeatLevel());
-         if (getTortilla().getCurrentTemperature() >= getTortilla().getToastTemperature())
+         getQueso().setCurrentTemperature(getQueso().getCurrentTemperature()
+                 + getHeatLevel());
+
+         if (getTortilla().getCurrentTemperature()
+                 >= getTortilla().getToastTemperature()) {
              getTortilla().toast(true);
-         if (getQueso().getCurrentTemperature() >= getQueso().getMeltingTemperature())
+         }
+         if (getQueso().getCurrentTemperature()
+                 >= getQueso().getMeltingTemperature()) {
              getQueso().melt(true);
+         }
      }
 
-     if(getQueso().isMelted() && getTortilla().isToasted())
+     if (getQueso().isMelted() && getTortilla().isToasted()) {
          return "Perfect quesadilla";
-     if(getQueso().isMelted() && !getTortilla().isToasted())
+     }
+     if (getQueso().isMelted() && !getTortilla().isToasted()) {
          return "Good quesadilla";
-     if(!getQueso().isMelted() && getTortilla().isToasted())
+     }
+     if (!getQueso().isMelted() && getTortilla().isToasted()) {
          return "Terrible quesadilla";
-     else
+     } else {
          return "You ran out of gas";
+     }
 
     }
-
-    public String prepareDouble(){
+    /**
+     * Metodo.
+     * @return  el resultado de que tan rica esta la quesadilla doble.
+     */
+    public  final String prepareDouble() {
         // tortilla 1 tostada, tortilla 2 tostada, queso derretido
         // tortilla 1 no tostada, tortilla 2 tostada, queso derretido
         // tortilla 1 no tostada, tortilla 2 tostada, queso no derretido
@@ -44,28 +74,50 @@ public class Quesadilla
         return "";
     }
 
-    public Queso getQueso() {
+    /**
+     * Metodo.
+     * @return regresa el valor de queso.
+     */
+    public final Queso getQueso() {
         return queso;
     }
-
-    public void setQueso(Queso queso) {
-        this.queso = queso;
+    /**
+     * Metodo.
+     * @param quesoCasa es una variable.
+     */
+    public final void setQueso(final Queso quesoCasa) {
+        this.queso = quesoCasa;
     }
 
-
-    public Tortilla getTortilla() {
+    /**
+     * Metodo.
+     * @return  valor tortilla.
+     */
+    public final Tortilla getTortilla() {
         return tortilla;
     }
 
-    public void setTortilla(Tortilla tortilla) {
-        this.tortilla = tortilla;
+    /**
+     * Metodo.
+     * @param tortillaCasa es una variable.
+     */
+    public final void setTortilla(final Tortilla tortillaCasa) {
+        this.tortilla = tortillaCasa;
     }
 
-    public int getHeatLevel() {
+    /**
+     * Metodo.
+     * @return  el valor de heatLevel.
+     */
+    public final int getHeatLevel() {
         return heatLevel;
     }
 
-    public void setHeatLevel(int heatLevel) {
+    /**
+     * Metodo.
+     * @param heatLevelCasa es una variable.
+     */
+    public final void setHeatLevel(final int heatLevelCasa) {
         this.heatLevel = heatLevel;
     }
 }

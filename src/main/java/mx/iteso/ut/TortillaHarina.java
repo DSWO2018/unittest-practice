@@ -1,23 +1,70 @@
 package mx.iteso.ut;
 
+/**
+ * Tortilla es una clase.
+ */
 public class TortillaHarina implements Tortilla {
-    public boolean isToasted() {
+
+    /**
+     * toasted es unaVariable.
+     */
+    private boolean toasted;
+
+    /**
+     * toasted es unaVariable.
+     */
+    private int temperature;
+
+    /**
+     * toasted es unaVariable.
+     */
+    private final int IniciarToasting = 20;
+
+    /**
+     * toasted es unaVariable.
+     */
+    private int toasting = IniciarToasting;
+
+    /**
+     * Metodo.
+     * @return  Toasted.
+     */
+    public final boolean isToasted() {
         return false;
     }
 
-    public int getToastTemperature() {
-        return 0;
+    /**
+     * Metodo.
+     * @return  toasting.
+     */
+    public final int getToastTemperature() {
+        return this.toasting;
     }
 
-    public int getCurrentTemperature() {
-        return 0;
+    /**
+     * Metodo.
+     * @return  temperature.
+     */
+    public final int getCurrentTemperature() {
+        return this.temperature;
     }
 
-    public void setCurrentTemperature(int temp) {
+    /**
+     * metodo.
+     * @param temp is a variable.
+     */
+
+    public final void setCurrentTemperature(final int temp) {
+        this.temperature = temp;
 
     }
 
-    public void toast(boolean toasted) {
+    /**
+     * Metodo.
+     * @param toastedCasa is a variable.
+     */
+    public final void toast(final boolean toastedCasa) {
+        this.toasted = toastedCasa;
 
     }
 }
