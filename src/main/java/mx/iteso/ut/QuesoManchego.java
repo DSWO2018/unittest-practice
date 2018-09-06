@@ -1,25 +1,67 @@
 package mx.iteso.ut;
-
-
-
+/**
+ * Queso es una clase.
+ */
 public class QuesoManchego implements Queso {
 
-    boolean melted;
-    int melting = 20;
-    int temperature;
+    /**
+     *  es una variable.
+     */
+    private boolean melted;
 
+    /**
+     * temperature es una variable.
+     */
+    private int temperature;
 
-    public boolean isMelted() { return this.melted; }
+    /**
+     *IniciarMelting es una variable.
+     */
+    private final int IniciarMelting = 20;
 
-    public int getCurrentTemperature() {
+    /**
+     *melting es una variable.
+     */
+    private int melting = IniciarMelting;
+
+    /**
+     * Metodo.
+     * @return el melted.
+     */
+    public final boolean isMelted() {
+        return this.melted;
+    }
+
+    /**
+     * Metodo.
+     * @return el temperature.
+     */
+    public final int getCurrentTemperature() {
         return this.temperature;
     }
 
-    public int getMeltingTemperature() {
+    /**
+     * Metodo.
+     * @return el meldting curr.
+     */
+    public final int getMeltingTemperature() {
         return this.melting;
     }
 
-    public void setCurrentTemperature(int temp) {this.temperature= temp; }
+    /**
+     * Metodo.
+     * @param temp is a variable.
+     */
+    public final void setCurrentTemperature(final int temp) {
+        this.temperature = temp;
 
-    public void melt(boolean melted) {this.melted= melted; }
+    }
+
+    /**
+     * Metodo.
+     * @param meltedCasa is a variable.
+     */
+    public final void melt(final boolean meltedCasa) {
+        this.melted = meltedCasa;
+    }
 }
