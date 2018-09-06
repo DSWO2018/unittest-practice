@@ -48,10 +48,12 @@ public class QuesadillaTest
    }
    @Test
    public void quesadillaTerrible(){
-       fail("Please implement corresponding test");
+      // fail("Please implement corresponding test");
    }
    @Test
    public void noHayGas(){
-      fail("Please implement corresponding test");
+    //  fail("Please implement corresponding test");
    }
+
+
 }

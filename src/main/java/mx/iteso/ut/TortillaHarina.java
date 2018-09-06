@@ -1,6 +1,7 @@
 package mx.iteso.ut;
 
 public class TortillaHarina implements Tortilla {
+
     public boolean isToasted() {
         return false;
     }
