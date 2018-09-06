@@ -1,13 +1,47 @@
+/**
+ * Paquete de trabajo para clases de comida.
+ *
+ * @author Luis Fernando Palafox.
+ * @version 1.1
+ * @since 1.0
+ */
 package mx.iteso.ut;
 
+/**
+ * Clase para preparar queso.
+ */
 public interface Queso {
-    public boolean isMelted();
+    /**
+     * Se ve el esdatdo.
+     *
+     * @return dice si esta derretido.
+     */
+     boolean isMelted();
 
-    public int getCurrentTemperature();
+    /**
+     * Se regresa la temperatura.
+     *
+     * @return la temperatura.
+     */
+     int getCurrentTemperature();
 
-    public int getMeltingTemperature();
+    /**
+     * Se regresa la temperatura de cocina.
+     *
+     * @return la temperatura de cocina.
+     */
+     int getMeltingTemperature();
 
-    public void setCurrentTemperature(int temp);
+    /**
+     * Se regresa la temperatura.
+     * @param temp se da la temperatura.
+     */
+     void setCurrentTemperature(int temp);
 
-    public void melt(boolean melted);
+    /**
+     * Se cocina.
+     *
+     * @param melted se da si esta cocinado.
+     */
+     void melt(boolean melted);
 }

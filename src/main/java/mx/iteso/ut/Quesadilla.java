@@ -88,7 +88,7 @@ public class Quesadilla {
     /**
      * Se da el queso.
      *
-     * @param quesoSet se específica el queso a usar
+     * @param quesoSet se específica el queso a usar.
      */
     public final void setQueso(final Queso quesoSet) {
         this.queso = quesoSet;
@@ -106,7 +106,7 @@ public class Quesadilla {
     /**
      * Se da  la tortilla.
      *
-     * @param tortillaSet se específica la tortilla
+     * @param tortillaSet se específica la tortilla.
      */
     public final void setTortilla(final Tortilla tortillaSet) {
         this.tortilla = tortillaSet;
@@ -124,7 +124,7 @@ public class Quesadilla {
     /**
      * Se da  el nivel de calor.
      *
-     * @param heatLevelSet se específica el nivel de calor
+     * @param heatLevelSet se específica el nivel de calor.
      */
     public final void setHeatLevel(final int heatLevelSet) {
         this.heatLevel = heatLevelSet;

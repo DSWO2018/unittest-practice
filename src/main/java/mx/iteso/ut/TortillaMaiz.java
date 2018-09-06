@@ -1,3 +1,11 @@
+
+/**
+ * Paquete de trabajo para clases de comida.
+ *
+ * @author Luis Fernando Palafox.
+ * @version 1.1
+ * @since 1.0
+ */
 package mx.iteso.ut;
 
 public class TortillaMaiz implements Tortilla {
