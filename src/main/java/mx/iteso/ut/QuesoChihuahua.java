@@ -13,21 +13,21 @@ public class QuesoChihuahua implements Queso {
     /**
      * Variable para cocinado.
      */
-    boolean melted;
+    private boolean melted;
     /**
      * Variable para temperatura.
      */
-    int temperature;
+    private int temperature;
     /**
-     * Variable para nivel de cocinado
+     * Variable para nivel de cocinado.
      */
-    int melting = 20;
+    private int melting = 20;
     /**
      * Para saber si esta cocinado.
      *
      * @return se regresa un boleano para saber el estado del queso.
      */
-    public boolean isMelted() {
+    public final boolean isMelted() {
         return this.melted;
     }
 
@@ -36,35 +36,35 @@ public class QuesoChihuahua implements Queso {
      *
      * @return el nivel de temperatura.
      */
-    public int getCurrentTemperature() {
+    public final int getCurrentTemperature() {
         return this.temperature;
     }
 
     /**
-     * Se optiene la temperatura de cocinado
+     * Se optiene la temperatura de cocinado.
      *
      * @return nivel de temperatura.
      */
-    public int getMeltingTemperature() {
+    public final int getMeltingTemperature() {
         return this.melting;
     }
 
     /**
-     * se le da la temperatura
+     * se le da la temperatura.
      *
-     * @param  temp nueva temperatura a poner
+     * @param  temp nueva temperatura a poner.
      */
-    public void setCurrentTemperature(int temp) {
+    public final void setCurrentTemperature(final int temp) {
         this.temperature = temp;
     }
 
     /**
      * Se prepara la quesadilla.
      *
-     * @param  melted se cocina el queso chihuahua.
+     * @param  meltedV se cocina el queso chihuahua.
      */
-    public void melt(boolean melted) {
-        this.melted = melted;
+    public final void melt(final boolean meltedV) {
+        this.melted = meltedV;
 
     }
 }

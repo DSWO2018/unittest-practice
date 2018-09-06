@@ -6,16 +6,41 @@
  * @since 1.0
  */
 package mx.iteso.ut;
-
+/**
+ * Clase para preparar tortillas.
+ */
 public interface Tortilla {
-    public boolean isToasted();
+    /**
+     * Se ve el estado.
+     *
+     * @return dice si esta tostado.
+     */
+    boolean isToasted();
 
-    public int getToastTemperature();
+    /**
+     * Se ve el tipo de tostado.
+     *
+     * @return se da el nivel de tostado.
+     */
+    int getToastTemperature();
 
-    public int getCurrentTemperature();
+    /**
+     * Se ve el esdatdo.
+     *
+     * @return se regresa la temperatura en el momento.
+     */
+    int getCurrentTemperature();
 
-    public void setCurrentTemperature(int temp);
+    /**
+     * Se regresa la temperatura.
+     * @param temp se da la temperatura.
+     */
+    void setCurrentTemperature(int temp);
 
-    public void toast(boolean toasted);
+    /**
+     * Se ve si se quiere tostada.
+     * @param toasted estado del tostado.
+     */
+    void toast(boolean toasted);
 
 }

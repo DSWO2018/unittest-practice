@@ -6,30 +6,65 @@
  * @since 1.0
  */
 package mx.iteso.ut;
-
+/**
+ * Clase para preparar QuesoManchego.
+ */
 public class QuesoManchego implements Queso {
-
-    boolean melted;
-    int temperature;
-    int melting = 18;
-
-    public boolean isMelted() {
+    /**
+     * Variable para cocinado.
+     */
+    private boolean melted;
+    /**
+     * Variable para temperatura.
+     */
+    private int temperature;
+    /**
+     * Variable para nivel de cocinado.
+     */
+    private int melting = 18;
+    /**
+     * Para saber si esta cocinado.
+     *
+     * @return se regresa un boleano para saber el estado del queso.
+     */
+    public final boolean isMelted() {
         return this.melted;
     }
 
-    public int getCurrentTemperature() {
+    /**
+     * Se optiene la temperatura en el momento.
+     *
+     * @return el nivel de temperatura.
+     */
+    public final int getCurrentTemperature() {
         return this.temperature;
     }
 
-    public int getMeltingTemperature() {
+    /**
+     * Se optiene la temperatura de cocinado.
+     *
+     * @return nivel de temperatura.
+     */
+    public final int getMeltingTemperature() {
         return this.melting;
     }
 
-    public void setCurrentTemperature(int temp) {
+    /**
+     * se le da la temperatura.
+     *
+     * @param  temp nueva temperatura a poner.
+     */
+    public final void setCurrentTemperature(final int temp) {
         this.temperature = temp;
     }
 
-    public void melt(boolean melted) {
-        this.melted = melted;
+    /**
+     * Se prepara la quesadilla.
+     *
+     * @param  meltedV se cocina el queso chihuahua.
+     */
+    public final void melt(final boolean meltedV) {
+        this.melted = meltedV;
+
     }
 }
